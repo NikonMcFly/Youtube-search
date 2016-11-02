@@ -6,7 +6,10 @@ import { Component } from 'react'
 class VideoList extends Component {
 
   const videos = this.props.videos.map(function(){
-    return <VideoListItem key={video.etag} video={video} />
+    return <VideoListItem
+      onVideoClick={props.onVideoSelect}
+      key={video.etag}
+      video={video} />
 
   })
 
